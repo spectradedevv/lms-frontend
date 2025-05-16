@@ -30,7 +30,7 @@ function CourseCurriculum() {
   function handleNewLecture() {
     setCourseCurriculumFormData([
       ...courseCurriculumFormData,
-      {
+      { 
         ...courseCurriculumInitialFormData[0],
       },
     ]);
@@ -143,9 +143,7 @@ function CourseCurriculum() {
         bulkFormData,
         setMediaUploadProgressPercentage
       );
-
-      console.log(response, "bulk");
-      if (response?.success) {
+       if (response?.success) {
         let cpyCourseCurriculumFormdata =
           areAllCourseCurriculumFormDataObjectsEmpty(courseCurriculumFormData)
             ? []
@@ -197,7 +195,7 @@ function CourseCurriculum() {
             accept="video/*"
             multiple
             className="hidden"
-            id="bulk-media-upload"
+            id="bulk-media-upload" 
             onChange={handleMediaBulkUpload}
           />
           <Button
@@ -238,7 +236,7 @@ function CourseCurriculum() {
                   value={courseCurriculumFormData[index]?.title}
                 />
                 <div className="flex items-center space-x-2">
-                  <Switch
+                  <Switch 
                     onCheckedChange={(value) =>
                       handleFreePreviewChange(value, index)
                     }
