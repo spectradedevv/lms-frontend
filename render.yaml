@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: vite-react-app
+    staticPublishPath: dist
+    buildCommand: npm run build
+    routes:
+      - type: rewrite
+        source: /.*     # Catch all routes
+        destination: /index.html
